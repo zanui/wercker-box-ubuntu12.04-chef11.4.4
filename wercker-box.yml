@@ -1,10 +1,10 @@
-# 
+#
 # Copyright 2013, Zanui <engineering@zanui.com.au>
 #
 # Contributors:
 #   Enrico Stahn  <mail@enricostahn.com>
 #   Adam Woods    <adam@woodsae.com>
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -33,7 +33,6 @@ script : |
   sudo apt-get update
   sudo apt-get install -yq wget curl
   export CHEF_DEB=chef_11.4.4-2.ubuntu.11.04_amd64.deb
-  cd
   wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/11.04/x86_64/$CHEF_DEB
   sudo dpkg -i $CHEF_DEB
   chef-solo -v
