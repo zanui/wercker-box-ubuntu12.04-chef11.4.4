@@ -35,13 +35,10 @@ script : |
   echo 'HOME: ' $HOME
   echo 'PATH: ' $PATH
   echo 'PWD: ' $PWD
-  echo 'Home Contents:' `ls -la $HOME`
-  echo 'RVM Location: ' `which rvm`
-  echo 'Ruby Location: ' `which ruby`
-  echo 'Ruby Version: ' `ruby --version`
-
-  # Set ruby version
-  rvm use ruby-2.0.0-p451
+  echo 'Home Contents: '
+  ls -la $HOME
+  echo 'Wercker Root Contents: '
+  ls -la $WERCKER_ROOT
 
   # Install needed system packages
   sudo apt-get update
@@ -53,6 +50,3 @@ script : |
   sudo dpkg -i $CHEF_DEB
   chef-solo -v
   rm $CHEF_DEB
-
-  # Install Berkshelf 3.1.2
-  sudo gem install berkshelf -v '3.1.2' --no-rdoc --no-ri
