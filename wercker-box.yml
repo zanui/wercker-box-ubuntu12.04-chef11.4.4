@@ -37,3 +37,4 @@ script : |
   sudo dpkg -i $CHEF_DEB
   chef-solo -v
   rm $CHEF_DEB
+  sudo gem install berkshelf -v '3.1.2' --no-rdoc --no-ri
