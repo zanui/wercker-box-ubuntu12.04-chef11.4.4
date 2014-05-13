@@ -30,6 +30,12 @@ keywords :
 packages :
   - chef@11.4.4
 script : |
+  # Debugging Information
+  echo 'WHOAMI: ' `whoami`
+  echo 'HOME: ' $HOME
+  echo 'PATH: ' $PATH
+  echo 'Ruby Location: ' `which ruby`
+  echo 'Ruby Version: ' `ruby --version`
   sudo apt-get update
   sudo apt-get install -yq wget curl
   export CHEF_DEB=chef_11.4.4-2.ubuntu.11.04_amd64.deb
