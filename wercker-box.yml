@@ -30,17 +30,18 @@ keywords :
 packages :
   - chef@11.4.4
 script : |
-  # Set ruby version
-  rvm use ruby-2.0.0-p451
-
   # Debugging Information
   echo 'WHOAMI: ' `whoami`
   echo 'HOME: ' $HOME
   echo 'PATH: ' $PATH
+  echo 'PWD: ' $PWD
+  echo 'Home Contents:' `ls -la $HOME`
   echo 'RVM Location: ' `which rvm`
   echo 'Ruby Location: ' `which ruby`
   echo 'Ruby Version: ' `ruby --version`
 
+  # Set ruby version
+  rvm use ruby-2.0.0-p451
 
   # Install needed system packages
   sudo apt-get update
