@@ -21,7 +21,7 @@
 #
 
 name: ubuntu12.04-chef11.4.4
-version: 1.0.1
+version: 1.1.0
 description: Base box with Chef 11.4.4 installed to use for running chef recipes
 type : main
 platform : ubuntu@12.04
