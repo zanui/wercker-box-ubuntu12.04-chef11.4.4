@@ -23,15 +23,15 @@
 name: ubuntu12.04-chef11.4.4
 version: 1.2.0
 description: Base box with Chef 11.4.4 installed to use for running chef recipes
-type : main
-platform : ubuntu@12.04
-keywords :
+type: main
+platform: ubuntu@12.04
+keywords:
   - chef
-packages :
+packages:
   - chef@11.4.4
   - ruby@1.9.3
-  - berkshelf@1.1.6
-script : |
+  - berkshelf@3.1.2
+script: |
   # Debugging Information
   echo 'WHOAMI: ' `whoami`
   echo 'HOME: ' $HOME
