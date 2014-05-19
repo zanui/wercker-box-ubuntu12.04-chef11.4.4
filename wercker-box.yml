@@ -21,7 +21,7 @@
 #
 
 name: ubuntu12.04-chef11.4.4
-version: 1.1.0
+version: 1.2.0
 description: Base box with Chef 11.4.4 installed to use for running chef recipes
 type : main
 platform : ubuntu@12.04
@@ -29,6 +29,8 @@ keywords :
   - chef
 packages :
   - chef@11.4.4
+  - ruby@1.9.3
+  - berkshelf@1.1.6
 script : |
   # Debugging Information
   echo 'WHOAMI: ' `whoami`
@@ -42,7 +44,8 @@ script : |
 
   # Install needed system packages
   sudo apt-get update
-  sudo apt-get install -yq wget curl
+  sudo apt-get install ruby1.9.3 curl git build-essential wget curl
+  sudo gem install berkshelf -v '3.1.2' --no-rdoc --no-ri
 
   # Install Chef 11.4.4
   export CHEF_DEB=chef_11.4.4-2.ubuntu.11.04_amd64.deb
@@ -50,3 +53,5 @@ script : |
   sudo dpkg -i $CHEF_DEB
   chef-solo -v
   rm $CHEF_DEB
+
+  
