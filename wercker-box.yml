@@ -21,7 +21,7 @@
 #
 
 name: ubuntu12.04-chef11.4.4
-version: 1.2.1
+version: 1.2.2
 description: Base box with Chef 11.4.4 installed to use for running chef recipes
 type: main
 platform: ubuntu@12.04
@@ -41,8 +41,7 @@ script: |
   ls -la $HOME
   echo 'Wercker Root Contents: '
   ls -la $WERCKER_ROOT
-  echo 'RVM installed?'
-  which `rvm`
+  echo 'RVM installed?' `which rvm`
 
   # Install needed system packages
   sudo apt-get update
