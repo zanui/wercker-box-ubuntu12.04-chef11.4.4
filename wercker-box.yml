@@ -41,6 +41,8 @@ script: |
   ls -la $HOME
   echo 'Wercker Root Contents: '
   ls -la $WERCKER_ROOT
+  echo 'RVM installed?'
+  which `rvm`
 
   # Install needed system packages
   sudo apt-get update
